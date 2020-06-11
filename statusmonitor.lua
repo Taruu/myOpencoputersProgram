@@ -35,6 +35,7 @@ for col_three in ipairs(list_all_disel_generator) do
     temp_str_id = list_all_disel_generator[col_three]
     list_all_disel_generator[col_three] = component.proxy(component.get(temp_str_id)) 
     list_all_disel_generator[col_three].enableComputerControl(false)
+    list_all_disel_generator[col_three].setEnabled(false)
 end
 
 
