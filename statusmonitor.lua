@@ -27,16 +27,14 @@ for col_three in ipairs(list_all_cell) do
         temp_str_id = list_all_cell[col_three][row_item]
         print(temp_str_id)
         list_all_cell[col_three][row_item] = component.proxy(component.get(temp_str_id))
-        --print("info",col_three,row_item,list_all_cell[col_three][row_item].getEnergyStored())
     end
-    print("sum",floor_to_step(sum(list_all_cell[col_three])/3,0.01))
+    --print("sum",floor_to_step(sum(list_all_cell[col_three])/3,0.01))
 end
 
 for col_three in ipairs(list_all_disel_generator) do
     temp_str_id = list_all_disel_generator[col_three]
-    print(temp_str_id)
-    list_all_disel_generator[col_three] = component.proxy(component.get(temp_str_id))        
-    print("sum",list_all_disel_generator[col_three].enableComputerControl(true))
+    list_all_disel_generator[col_three] = component.proxy(component.get(temp_str_id)) 
+    list_all_disel_generator[col_three].enableComputerControl(false)
 end
 
 
